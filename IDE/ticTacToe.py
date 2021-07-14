@@ -9,7 +9,7 @@ class tictactoe:
     def spaceIsFree(self,pos):
         return self.board[pos]==' '
 
-    def printBoard(self):
+    def printBoard(self,board):
         print("   |   |")
         print(' '+self.board[1]+" | "+self.board[2]+" | "+self.board[3])
         print("   |   |")
