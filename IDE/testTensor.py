@@ -117,7 +117,7 @@ print("The dimensions of an unshuffled matrix tensor is:",notShuffled.ndim)
 #Printing the essence values of notShuffled variable
 print(notShuffled)
 
-#Shuffling our notShuffled tensor
+#Shuffling the notShuffled tensor
 shuffled=tf.random.shuffle(notShuffled,seed=40)
 
 #Check the dimensions of a matrix tensor (ndim stands for number of dimensions)
