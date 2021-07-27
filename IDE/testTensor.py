@@ -3,7 +3,8 @@
 #Importing TensorFlow
 import tensorflow as tf
 
-print(tf.__version__)
+#Printing the version of tensorflow library
+print("The version of current tensorflow is: "+tf.__version__)
 
 #Creating tensors with tf.constant()
 scalar=tf.constant(10)
@@ -117,7 +118,13 @@ print("The dimensions of an unshuffled matrix tensor is:",notShuffled.ndim)
 #Printing the essence values of notShuffled variable
 print(notShuffled)
 
-#Shuffling the notShuffled tensor
+#To set shuffled tensors in the same order, the global random seed and the 
+#operational random seed should be used.
+
+#Setting a global random seed for the tensor
+tf.random.set_seed(40)
+
+#Shuffling the notShuffled tensor with operational random seed
 shuffled=tf.random.shuffle(notShuffled,seed=40)
 
 #Check the dimensions of a matrix tensor (ndim stands for number of dimensions)
